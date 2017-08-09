@@ -1,5 +1,5 @@
 # Workout Randomizer
-### Device suported: iPhone
+### Device supported: iPhone
 To install this application on your iPhone you must have Xcode installed on your mac. Application signing will last one week then the application ahs to be re-installed. You will need your own free apple developer account.  
 ### To install:
 1. Clone this project into you working directory.
