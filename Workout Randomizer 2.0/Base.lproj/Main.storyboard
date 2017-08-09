@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Workout_Randomizer_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Select muscle groups." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lb-kh-7iA" customClass="ShadowLabel" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="40" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="LSe-jG-dmS"/>
+                                    <constraint firstAttribute="height" constant="30" id="zQo-RW-sZq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOQ-x3-Tg4" customClass="AppButton" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="66" y="120" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="aUD-11-xgl"/>
+                                    <constraint firstAttribute="height" constant="40" id="uTi-oK-Tid"/>
+                                </constraints>
+                                <state key="normal" title="Chest"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="aUD-11-xgl"/>
+                                        <exclude reference="uTi-oK-Tid"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="aUD-11-xgl"/>
+                                        <include reference="uTi-oK-Tid"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="chestButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j7M-rI-3tA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Y9-uD-9Ly" customClass="AppButton" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="209" y="120" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Qf6-Fa-lqY"/>
+                                    <constraint firstAttribute="width" constant="130" id="iyZ-BS-gp1"/>
+                                </constraints>
+                                <state key="normal" title="Triceps"/>
+                                <connections>
+                                    <action selector="tricepButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7yL-0h-3Fr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOc-MZ-rIx" customClass="AppButton" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="66" y="200" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="6Gt-an-xC3"/>
+                                    <constraint firstAttribute="height" constant="40" id="CGR-pi-Y83"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4L-xi-2B7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPq-Mp-OjA" customClass="AppButton" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="209" y="200" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Lub-dJ-QFe"/>
+                                    <constraint firstAttribute="height" constant="40" id="of7-DN-cTX"/>
+                                </constraints>
+                                <state key="normal" title="Biceps"/>
+                                <connections>
+                                    <action selector="bicepButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JOV-Yu-hC0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUf-TQ-5Dz" customClass="AppButton" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="66" y="280" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="71m-dX-zF0"/>
+                                    <constraint firstAttribute="width" constant="130" id="zFE-Wc-tur"/>
+                                </constraints>
+                                <state key="normal" title="Legs"/>
+                                <connections>
+                                    <action selector="legButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tnk-uR-igX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFj-PQ-tdr" customClass="AppButton" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="209" y="280" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="4JN-kW-cM4"/>
+                                    <constraint firstAttribute="height" constant="40" id="twL-qd-4AP"/>
+                                </constraints>
+                                <state key="normal" title="Shoulders"/>
+                                <connections>
+                                    <action selector="shoulderButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jEj-75-IhQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6Y-O4-uae" customClass="AppButton" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="122.5" y="360" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5NC-eX-a4k"/>
+                                    <constraint firstAttribute="width" constant="130" id="nCO-5P-kKA"/>
+                                </constraints>
+                                <state key="normal" title="Abdomen"/>
+                                <connections>
+                                    <action selector="abdomenButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sqc-jy-0q8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Select number of exercises." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JT-zl-QWA" customClass="ShadowLabel" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="72.5" y="420" width="230" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="9l2-1S-ME1"/>
+                                    <constraint firstAttribute="height" constant="30" id="Nbc-Lx-a3b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Exercises" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWY-sx-yem" customClass="ShadowLabel" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="66" y="470" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Eux-gF-3u4"/>
+                                    <constraint firstAttribute="width" constant="100" id="bSA-ba-t6e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Aa5-zK-OEX">
+                                <rect key="frame" x="209" y="470" width="94" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hBn-Pw-hke"/>
+                                    <constraint firstAttribute="width" constant="100" id="lJk-xQ-Y29"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="exerciseStepperPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="KE3-Sv-g69"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YI1-Sl-akt" customClass="ShadowLabel" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="530" width="375" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqq-E8-TYm" customClass="AppButton" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="122.5" y="587" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Enw-7b-rDN"/>
+                                    <constraint firstAttribute="width" constant="130" id="xWw-Jr-w7Q"/>
+                                </constraints>
+                                <state key="normal" title="Randomize"/>
+                                <connections>
+                                    <action selector="randomizeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dJF-2J-A1n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yqq-E8-TYm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9kg-gx-WGh"/>
+                            <constraint firstAttribute="trailing" secondItem="YI1-Sl-akt" secondAttribute="trailing" id="A4d-BR-uWv"/>
+                            <constraint firstItem="2JT-zl-QWA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VAy-aS-ByC"/>
+                            <constraint firstItem="YI1-Sl-akt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aRz-8J-cVR"/>
+                            <constraint firstItem="K6Y-O4-uae" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gG1-rK-rBR"/>
+                            <constraint firstItem="YI1-Sl-akt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lRZ-dk-YRt"/>
+                            <constraint firstItem="1lb-kh-7iA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s0b-Hv-kKs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="abdomenBtn" destination="K6Y-O4-uae" id="xPH-rG-sgu"/>
+                        <outlet property="backBtn" destination="dOc-MZ-rIx" id="Gbd-7q-aKI"/>
+                        <outlet property="bicepBtn" destination="TPq-Mp-OjA" id="7h1-LO-yg1"/>
+                        <outlet property="chestBtn" destination="VOQ-x3-Tg4" id="8jC-Tn-oGe"/>
+                        <outlet property="exerciseStepper" destination="Aa5-zK-OEX" id="R6z-YD-QfB"/>
+                        <outlet property="legBtn" destination="YUf-TQ-5Dz" id="PIq-Ke-E7f"/>
+                        <outlet property="numberOfExercisesLbl" destination="LWY-sx-yem" id="jVy-eU-b7m"/>
+                        <outlet property="randomizeBtn" destination="yqq-E8-TYm" id="OMX-oa-t9k"/>
+                        <outlet property="selectMuscleGroupLbl" destination="1lb-kh-7iA" id="dva-7G-Ahi"/>
+                        <outlet property="selectNumberOfExercisesLbl" destination="2JT-zl-QWA" id="Aow-70-JT6"/>
+                        <outlet property="shoulderBtn" destination="zFj-PQ-tdr" id="CIe-xl-0YO"/>
+                        <outlet property="specialConditionLbl" destination="YI1-Sl-akt" id="Jm8-ue-HOT"/>
+                        <outlet property="tricepBtn" destination="0Y9-uD-9Ly" id="4pN-qw-ITC"/>
+                        <segue destination="5Ac-tB-jVy" kind="custom" identifier="transitionToExercises" customClass="SegueFromRight" customModule="Workout_Randomizer_2_0" customModuleProvider="target" id="kbp-8V-cxQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.799999999999997" y="138.98050974512745"/>
+        </scene>
+        <!--Workouts View Controller-->
+        <scene sceneID="ANW-qd-Hzk">
+            <objects>
+                <viewController id="5Ac-tB-jVy" customClass="WorkoutsViewController" customModule="Workout_Randomizer_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PkH-Ea-p8e"/>
+                        <viewControllerLayoutGuide type="bottom" id="wrA-C1-V7z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2gU-dn-OPo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gu7-Ka-i7H">
+                                <rect key="frame" x="32.5" y="80" width="310" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="uUO-6i-dBF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Click exercise to view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wA4-mr-YBq" customClass="ShadowLabel" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="16" y="40" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KyB-ra-9jQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XBe-DF-3ii">
+                                <rect key="frame" x="32.5" y="80" width="310" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="gu2-1O-dxR"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2v-UH-Of9" customClass="AppButton" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="239" y="597" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lA1-kW-8SH"/>
+                                    <constraint firstAttribute="width" constant="130" id="zjT-0a-nUw"/>
+                                </constraints>
+                                <state key="normal" title="Interval"/>
+                                <connections>
+                                    <action selector="intervalButtonPressed:" destination="5Ac-tB-jVy" eventType="touchUpInside" id="608-CH-RyN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKf-3Z-jkr" customClass="AppButton" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="36" y="597" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bcq-0N-RjN"/>
+                                    <constraint firstAttribute="width" constant="130" id="hOj-uk-tcu"/>
+                                </constraints>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="5Ac-tB-jVy" eventType="touchUpInside" id="Rju-IO-3od"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVK-AQ-ANW" customClass="AppButton" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="122.5" y="597" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="1yt-vn-hme"/>
+                                    <constraint firstAttribute="height" constant="40" id="Py0-oV-Teq"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="5Ac-tB-jVy" eventType="touchUpInside" id="XQu-0B-w5z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vVK-AQ-ANW" firstAttribute="centerX" secondItem="2gU-dn-OPo" secondAttribute="centerX" id="3pm-uf-4dz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wA4-mr-YBq" secondAttribute="trailing" id="EWo-0E-315"/>
+                            <constraint firstItem="wA4-mr-YBq" firstAttribute="leading" secondItem="2gU-dn-OPo" secondAttribute="leadingMargin" id="H3j-k4-BoX"/>
+                            <constraint firstItem="wA4-mr-YBq" firstAttribute="centerX" secondItem="2gU-dn-OPo" secondAttribute="centerX" id="IKb-dH-UB3"/>
+                            <constraint firstItem="gu7-Ka-i7H" firstAttribute="centerX" secondItem="2gU-dn-OPo" secondAttribute="centerX" id="qGk-40-C1D"/>
+                            <constraint firstItem="XBe-DF-3ii" firstAttribute="centerX" secondItem="2gU-dn-OPo" secondAttribute="centerX" id="u3c-s6-ScO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="vVK-AQ-ANW" id="r2l-TV-tbm"/>
+                        <outlet property="exerciseGifView" destination="gu7-Ka-i7H" id="7tT-2y-TPI"/>
+                        <outlet property="exercisesScrollView" destination="XBe-DF-3ii" id="xJP-42-vIj"/>
+                        <outlet property="intervalButton" destination="B2v-UH-Of9" id="GJG-6z-2PB"/>
+                        <outlet property="resetBtn" destination="CKf-3Z-jkr" id="6Bt-Hc-YAe"/>
+                        <outlet property="viewExerciseLbl" destination="wA4-mr-YBq" id="aWp-Ah-rff"/>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="exercisesToHome" customClass="SegueFromLeft" customModule="Workout_Randomizer_2_0" customModuleProvider="target" id="UPT-Ku-XcQ"/>
+                        <segue destination="pdR-Oj-0ZW" kind="presentation" identifier="exercisesToInterval" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="IiJ-Vy-z3s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fte-2u-eip" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="139"/>
+        </scene>
+        <!--Interval View Controller-->
+        <scene sceneID="27a-Nb-CgF">
+            <objects>
+                <viewController id="pdR-Oj-0ZW" customClass="IntervalViewController" customModule="Workout_Randomizer_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <visualEffectView key="view" opaque="NO" contentMode="scaleToFill" id="4B8-Ho-WhM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gXj-rl-Y65">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POz-Qu-HEy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <connections>
+                                        <action selector="dismissPopup:" destination="pdR-Oj-0ZW" eventType="touchUpInside" id="car-rR-9HX"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNl-TA-SXQ" customClass="DesignableView" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                    <rect key="frame" x="52.5" y="183.5" width="270" height="300"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Select time per exercise" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-6f-8hB" customClass="ShadowLabel" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                            <rect key="frame" x="14.5" y="8" width="240" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="240" id="Js8-Om-1RQ"/>
+                                                <constraint firstAttribute="height" constant="30" id="PG3-dK-MQC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Time/Exercise" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oC4-Y2-9JT" customClass="ShadowLabel" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                            <rect key="frame" x="15.5" y="74" width="240" height="29"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="240" id="EuL-2r-EhI"/>
+                                                <constraint firstAttribute="height" constant="30" id="TFM-v8-19h"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpX-WL-eHz" customClass="AppButton" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                            <rect key="frame" x="70" y="180" width="130" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="QXf-Le-crV"/>
+                                                <constraint firstAttribute="height" constant="40" id="gaT-m8-RUa"/>
+                                            </constraints>
+                                            <state key="normal" title="Start"/>
+                                            <connections>
+                                                <action selector="startButtonPressed:" destination="pdR-Oj-0ZW" eventType="touchUpInside" id="OTP-ze-OCb"/>
+                                            </connections>
+                                        </button>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="BMe-zF-6EP">
+                                            <rect key="frame" x="85" y="124" width="94" height="29"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="jCD-a3-xeK"/>
+                                                <constraint firstAttribute="width" constant="100" id="mam-hv-0WO"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="intervalStepperPressed:" destination="pdR-Oj-0ZW" eventType="valueChanged" id="6hB-Iq-b68"/>
+                                            </connections>
+                                        </stepper>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="270" id="4hb-sn-jLp"/>
+                                        <constraint firstAttribute="height" constant="300" id="AWI-lb-xme"/>
+                                        <constraint firstItem="dfT-6f-8hB" firstAttribute="centerX" secondItem="QNl-TA-SXQ" secondAttribute="centerX" id="BGN-Fb-qOr"/>
+                                        <constraint firstItem="BMe-zF-6EP" firstAttribute="centerX" secondItem="QNl-TA-SXQ" secondAttribute="centerX" id="Twt-XQ-FUz"/>
+                                        <constraint firstItem="GpX-WL-eHz" firstAttribute="centerX" secondItem="QNl-TA-SXQ" secondAttribute="centerX" id="aQj-4m-mMy"/>
+                                        <constraint firstItem="oC4-Y2-9JT" firstAttribute="centerX" secondItem="QNl-TA-SXQ" secondAttribute="centerX" id="hHB-rG-0O0"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="POz-Qu-HEy" secondAttribute="trailing" id="FbQ-Nh-eCE"/>
+                                <constraint firstItem="POz-Qu-HEy" firstAttribute="leading" secondItem="gXj-rl-Y65" secondAttribute="leading" id="Hof-0a-owr"/>
+                                <constraint firstItem="QNl-TA-SXQ" firstAttribute="centerX" secondItem="gXj-rl-Y65" secondAttribute="centerX" id="Hsz-rK-ibT"/>
+                                <constraint firstItem="POz-Qu-HEy" firstAttribute="top" secondItem="gXj-rl-Y65" secondAttribute="top" id="Nbl-Ke-D5A"/>
+                                <constraint firstItem="QNl-TA-SXQ" firstAttribute="centerY" secondItem="gXj-rl-Y65" secondAttribute="centerY" id="OuP-U1-ERw"/>
+                                <constraint firstAttribute="bottom" secondItem="POz-Qu-HEy" secondAttribute="bottom" id="lSt-Xy-EBN"/>
+                            </constraints>
+                        </view>
+                        <blurEffect style="light"/>
+                    </visualEffectView>
+                    <connections>
+                        <outlet property="intervalPopupView" destination="QNl-TA-SXQ" id="hdq-QV-7Pg"/>
+                        <outlet property="intervalStepper" destination="BMe-zF-6EP" id="9O2-65-tfM"/>
+                        <outlet property="selectTimePerExerciseLabel" destination="dfT-6f-8hB" id="FjD-da-N8b"/>
+                        <outlet property="startBtn" destination="GpX-WL-eHz" id="NvA-Ez-uRj"/>
+                        <outlet property="timePerExerciseLabel" destination="oC4-Y2-9JT" id="ZLn-iT-gBy"/>
+                        <segue destination="1Jo-rk-92d" kind="custom" identifier="startInterval" customClass="SegueFromRight" customModule="Workout_Randomizer_2_0" customModuleProvider="target" id="0ju-G6-NfU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L3e-fT-IgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717.5999999999999" y="138.98050974512745"/>
+        </scene>
+        <!--Start Interval View Controller-->
+        <scene sceneID="Wzp-to-nKW">
+            <objects>
+                <viewController id="1Jo-rk-92d" customClass="StartIntervalViewController" customModule="Workout_Randomizer_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ps8-8C-L28"/>
+                        <viewControllerLayoutGuide type="bottom" id="jgW-AT-LWv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3xf-bs-iVP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCy-Qu-lhF">
+                                <rect key="frame" x="32" y="269" width="310" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="wUA-kk-WrY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSf-is-Jb6">
+                                <rect key="frame" x="32.5" y="51" width="310" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="Rco-6D-LTz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRS-7y-26A" customClass="ShadowLabel" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="162.5" y="51" width="50" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lhS-e5-Ies"/>
+                                    <constraint firstAttribute="width" constant="50" id="mfY-gM-uox"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1O-5V-oOb" customClass="AppButton" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="292" y="617" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Xla-5x-lah"/>
+                                    <constraint firstAttribute="width" constant="130" id="rbD-ja-PKR"/>
+                                </constraints>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pausePlayButtonPressed:" destination="1Jo-rk-92d" eventType="touchUpInside" id="aDK-rq-aHL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0I-R2-HwG" customClass="AppButton" customModule="Workout_Randomizer_2_0" customModuleProvider="target">
+                                <rect key="frame" x="35" y="617" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="gMd-ar-VY8"/>
+                                    <constraint firstAttribute="height" constant="40" id="mJN-JN-brR"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="1Jo-rk-92d" eventType="touchUpInside" id="uAZ-Zm-1VG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pSf-is-Jb6" firstAttribute="centerX" secondItem="3xf-bs-iVP" secondAttribute="centerX" id="L4z-RA-bT4"/>
+                            <constraint firstItem="KCy-Qu-lhF" firstAttribute="centerX" secondItem="3xf-bs-iVP" secondAttribute="centerX" id="jj0-hb-K2w"/>
+                            <constraint firstItem="xRS-7y-26A" firstAttribute="centerX" secondItem="3xf-bs-iVP" secondAttribute="centerX" id="zCE-bf-vSQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="B0I-R2-HwG" id="qQz-9r-3DB"/>
+                        <outlet property="exerciseGifView" destination="KCy-Qu-lhF" id="nUI-hM-EaI"/>
+                        <outlet property="exerciseNameLbl" destination="pSf-is-Jb6" id="KtK-SP-rQa"/>
+                        <outlet property="pausePlayButton" destination="d1O-5V-oOb" id="CZZ-PI-XHQ"/>
+                        <outlet property="timeLbl" destination="xRS-7y-26A" id="9OC-fF-Ar8"/>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="goBackHome" customClass="SegueFromLeft" customModule="Workout_Randomizer_2_0" customModuleProvider="target" id="RZf-bd-1Tr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXV-LC-ACm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2485.5999999999999" y="134.48275862068968"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RZf-bd-1Tr"/>
+    </inferredMetricsTieBreakers>
+</document>
