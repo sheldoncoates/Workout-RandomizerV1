@@ -127,7 +127,7 @@ class WorkoutsViewController: UIViewController {
                     numberArray.append(randomNumber)
                     let button = AppButton(frame: CGRect(x: 0, y: currYPosition, width: Int(self.exercisesScrollView.frame.size.width), height: 40))
                     button.setTitle(chestExercises[randomNumber], for: .normal)
-                    button.addTarget(self, action: #selector(viewExercise), for: UIControlEvents.touchUpInside)
+                    button.addTarget(self, action: #selector(viewExercise), for: UIControl.Event.touchUpInside)
                     self.exercisesScrollView.addSubview(button)
                     currYPosition += 42
                     scrollHeight += 42
@@ -163,7 +163,7 @@ class WorkoutsViewController: UIViewController {
                     numberArray.append(randomNumber)
                     let button = AppButton(frame: CGRect(x: 0, y: currYPosition, width: Int(self.exercisesScrollView.frame.size.width), height: 40))
                     button.setTitle(tricepExercises[randomNumber], for: .normal)
-                    button.addTarget(self, action: #selector(viewExercise), for: UIControlEvents.touchUpInside)
+                    button.addTarget(self, action: #selector(viewExercise), for: UIControl.Event.touchUpInside)
                     self.exercisesScrollView.addSubview(button)
                     currYPosition += 42
                     scrollHeight += 42
@@ -199,7 +199,7 @@ class WorkoutsViewController: UIViewController {
                     numberArray.append(randomNumber)
                     let button = AppButton(frame: CGRect(x: 0, y: currYPosition, width: Int(self.exercisesScrollView.frame.size.width), height: 40))
                     button.setTitle(backExercises[randomNumber], for: .normal)
-                    button.addTarget(self, action: #selector(viewExercise), for: UIControlEvents.touchUpInside)
+                    button.addTarget(self, action: #selector(viewExercise), for: UIControl.Event.touchUpInside)
                     self.exercisesScrollView.addSubview(button)
                     currYPosition += 42
                     scrollHeight += 42
@@ -235,7 +235,7 @@ class WorkoutsViewController: UIViewController {
                     numberArray.append(randomNumber)
                     let button = AppButton(frame: CGRect(x: 0, y: currYPosition, width: Int(self.exercisesScrollView.frame.size.width), height: 30))
                     button.setTitle(bicepExercises[randomNumber], for: .normal)
-                    button.addTarget(self, action: #selector(viewExercise), for: UIControlEvents.touchUpInside)
+                    button.addTarget(self, action: #selector(viewExercise), for: UIControl.Event.touchUpInside)
                     self.exercisesScrollView.addSubview(button)
                     currYPosition += 31
                     scrollHeight += 31
@@ -271,7 +271,7 @@ class WorkoutsViewController: UIViewController {
                     numberArray.append(randomNumber)
                     let button = AppButton(frame: CGRect(x: 0, y: currYPosition, width: Int(self.exercisesScrollView.frame.size.width), height: 40))
                     button.setTitle(legExercises[randomNumber], for: .normal)
-                    button.addTarget(self, action: #selector(viewExercise), for: UIControlEvents.touchUpInside)
+                    button.addTarget(self, action: #selector(viewExercise), for: UIControl.Event.touchUpInside)
                     self.exercisesScrollView.addSubview(button)
                     currYPosition += 42
                     scrollHeight += 42
@@ -307,7 +307,7 @@ class WorkoutsViewController: UIViewController {
                     numberArray.append(randomNumber)
                     let button = AppButton(frame: CGRect(x: 0, y: currYPosition, width: Int(self.exercisesScrollView.frame.size.width), height: 40))
                     button.setTitle(shoulderExercises[randomNumber], for: .normal)
-                    button.addTarget(self, action: #selector(viewExercise), for: UIControlEvents.touchUpInside)
+                    button.addTarget(self, action: #selector(viewExercise), for: UIControl.Event.touchUpInside)
                     self.exercisesScrollView.addSubview(button)
                     currYPosition += 42
                     scrollHeight += 42
@@ -343,7 +343,7 @@ class WorkoutsViewController: UIViewController {
                     numberArray.append(randomNumber)
                     let button = AppButton(frame: CGRect(x: 0, y: currYPosition, width: Int(self.exercisesScrollView.frame.size.width), height: 40))
                     button.setTitle(abdomenExercises[randomNumber], for: .normal)
-                    button.addTarget(self, action: #selector(viewExercise), for: UIControlEvents.touchUpInside)
+                    button.addTarget(self, action: #selector(viewExercise), for: UIControl.Event.touchUpInside)
                     self.exercisesScrollView.addSubview(button)
                     currYPosition += 42
                     scrollHeight += 42
@@ -360,7 +360,7 @@ class WorkoutsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func viewExercise(sender: UIButton) {
+    @objc func viewExercise(sender: UIButton) {
         backButton.isHidden = false
         //imageview to display gifs
         exerciseGifView.isHidden = false
@@ -963,25 +963,25 @@ class WorkoutsViewController: UIViewController {
     //lays out the subviews to work on different screen sizes
     func layoutSubviews(){
         //constraints for view ecercise label
-        let YConstraintViewExerciseLbl = NSLayoutConstraint(item: viewExerciseLbl, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.top, multiplier: 1, constant: self.view.frame.size.height/18)
+        let YConstraintViewExerciseLbl = NSLayoutConstraint(item: viewExerciseLbl ?? "", attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: self.view.frame.size.height/18)
         //adding label contraints to view
         view.addConstraints([YConstraintViewExerciseLbl])
         //constraints for exercise scrollview position
-        let YConstraintExerciseScrollView1 = NSLayoutConstraint(item: exercisesScrollView, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.top, multiplier: 1, constant: self.view.frame.size.height/10)
-        let YConstraintExerciseScrollView2 = NSLayoutConstraint(item: exercisesScrollView, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/8)
+        let YConstraintExerciseScrollView1 = NSLayoutConstraint(item: exercisesScrollView ?? "", attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: self.view.frame.size.height/10)
+        let YConstraintExerciseScrollView2 = NSLayoutConstraint(item: exercisesScrollView ?? "", attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/8)
         //adding scrollview constraints to view
         view.addConstraints([YConstraintExerciseScrollView1,YConstraintExerciseScrollView2])
         //button constraints
-        let XConstraintResetBtn = NSLayoutConstraint(item: resetBtn, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.leading, multiplier: 1, constant: self.view.frame.size.width/12)
-        let YConstraintResetBtn = NSLayoutConstraint(item: resetBtn, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/20)
-        let XConstraintIntervalBtn = NSLayoutConstraint(item: intervalButton, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.trailing, multiplier: 1, constant: -self.view.frame.size.width/12)
-        let YConstraintIntervalBtn = NSLayoutConstraint(item: intervalButton, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/20)
-        let YConstraintBackBtn = NSLayoutConstraint(item: backButton, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/20)
+        let XConstraintResetBtn = NSLayoutConstraint(item: resetBtn ?? "", attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: self.view.frame.size.width/12)
+        let YConstraintResetBtn = NSLayoutConstraint(item: resetBtn ?? "", attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/20)
+        let XConstraintIntervalBtn = NSLayoutConstraint(item: intervalButton ?? "", attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1, constant: -self.view.frame.size.width/12)
+        let YConstraintIntervalBtn = NSLayoutConstraint(item: intervalButton ?? "", attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/20)
+        let YConstraintBackBtn = NSLayoutConstraint(item: backButton ?? "", attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/20)
         //adding button constraints to view
         view.addConstraints([XConstraintResetBtn,YConstraintResetBtn,XConstraintIntervalBtn,YConstraintIntervalBtn,YConstraintBackBtn])
         //gif view constraints
-        let YConstraintGifView1 = NSLayoutConstraint(item: exerciseGifView, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.top, multiplier: 1, constant: self.view.frame.size.height/9)
-        let YConstraintGifView2 = NSLayoutConstraint(item: exerciseGifView, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/8)
+        let YConstraintGifView1 = NSLayoutConstraint(item: exerciseGifView ?? "", attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: self.view.frame.size.height/9)
+        let YConstraintGifView2 = NSLayoutConstraint(item: exerciseGifView ?? "", attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/8)
         //adding gif view constraints 
         view.addConstraints([YConstraintGifView1,YConstraintGifView2])
     }

@@ -133,7 +133,7 @@ class StartIntervalViewController: UIViewController {
         intervalTimer = Timer.scheduledTimer(timeInterval: 1, target:self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
     //basically switches gif and makes timer work
-    func updateTime(){
+    @objc func updateTime(){
         if counter == 1 {
             if chest == true{
                 if i < chestExercises.count {
@@ -736,23 +736,23 @@ class StartIntervalViewController: UIViewController {
     //lays out the subviews to work on different screen sizes
     func layoutSubviews(){
         //constraints for back button
-        let XConstraintBackbtn = NSLayoutConstraint(item: backButton, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.leading, multiplier: 1, constant: self.view.frame.size.width/12)
-        let YConstraintBackbtn = NSLayoutConstraint(item: backButton, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/20)
+        let XConstraintBackbtn = NSLayoutConstraint(item: backButton ?? "", attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: self.view.frame.size.width/12)
+        let YConstraintBackbtn = NSLayoutConstraint(item: backButton ?? "", attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/20)
         view.addConstraints([XConstraintBackbtn,YConstraintBackbtn])
         //constraints for exercise gif view position
-        let YConstraintExerciseGifView1 = NSLayoutConstraint(item: exerciseGifView, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.top, multiplier: 1, constant: self.view.frame.size.height/9)
-        let YConstraintExerciseGifView2 = NSLayoutConstraint(item: exerciseGifView, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/8)
+        let YConstraintExerciseGifView1 = NSLayoutConstraint(item: exerciseGifView ?? "", attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: self.view.frame.size.height/9)
+        let YConstraintExerciseGifView2 = NSLayoutConstraint(item: exerciseGifView ?? "", attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/8)
         //adding scrollview constraints to view
         view.addConstraints([YConstraintExerciseGifView1,YConstraintExerciseGifView2])
         //constraints for exercise name label
-        let YConstraintExerciseNameLbl = NSLayoutConstraint(item: exerciseNameLbl, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.top, multiplier: 1, constant: self.view.frame.size.height/8)
+        let YConstraintExerciseNameLbl = NSLayoutConstraint(item: exerciseNameLbl ?? "", attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: self.view.frame.size.height/8)
         view.addConstraints([YConstraintExerciseNameLbl])
         //constraints for time label
-        let YConstraintTimeLbl = NSLayoutConstraint(item: timeLbl, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.top, multiplier: 1, constant: self.view.frame.size.height/16)
+        let YConstraintTimeLbl = NSLayoutConstraint(item: timeLbl ?? "", attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: self.view.frame.size.height/16)
         view.addConstraints([YConstraintTimeLbl])
         //constraints for pause play button
-        let XConstraintPausePlaybtn = NSLayoutConstraint(item: pausePlayButton, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.trailing, multiplier: 1, constant: -self.view.frame.size.width/12)
-        let YConstraintPausePlaybtn = NSLayoutConstraint(item: pausePlayButton, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/20)
+        let XConstraintPausePlaybtn = NSLayoutConstraint(item: pausePlayButton ?? "", attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1, constant: -self.view.frame.size.width/12)
+        let YConstraintPausePlaybtn = NSLayoutConstraint(item: pausePlayButton ?? "", attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: -self.view.frame.size.height/20)
         view.addConstraints([XConstraintPausePlaybtn,YConstraintPausePlaybtn])
     }
 }

@@ -104,12 +104,12 @@ class IntervalViewController: UIViewController {
     }
     //lays out the subviews to work on different screen sizes
     func layoutSubviews(){
-         let YConstraintStartBtn = NSLayoutConstraint(item: startBtn, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: intervalPopupView, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: -self.intervalPopupView.frame.size.height/12)
+        let YConstraintStartBtn = NSLayoutConstraint(item: startBtn ?? "", attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: intervalPopupView, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: -self.intervalPopupView.frame.size.height/12)
         view.addConstraints([YConstraintStartBtn])
-        let YConstraintTimePerExerciseLabel = NSLayoutConstraint(item: timePerExerciseLabel, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: intervalPopupView, attribute: NSLayoutAttribute.top, multiplier: 1, constant: self.intervalPopupView.frame.size.height/3.5)
-        let YConstraintSelectTimePerExerciseLabel = NSLayoutConstraint(item: selectTimePerExerciseLabel, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: intervalPopupView, attribute: NSLayoutAttribute.top, multiplier: 1, constant: self.intervalPopupView.frame.size.height/10)
+        let YConstraintTimePerExerciseLabel = NSLayoutConstraint(item: timePerExerciseLabel ?? "", attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: intervalPopupView, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: self.intervalPopupView.frame.size.height/3.5)
+        let YConstraintSelectTimePerExerciseLabel = NSLayoutConstraint(item: selectTimePerExerciseLabel ?? "", attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: intervalPopupView, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: self.intervalPopupView.frame.size.height/10)
         view.addConstraints([YConstraintTimePerExerciseLabel,YConstraintSelectTimePerExerciseLabel])
-        let YConstraintIntervalStepper = NSLayoutConstraint(item: intervalStepper, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: intervalPopupView, attribute: NSLayoutAttribute.top, multiplier: 1, constant: self.intervalPopupView.frame.size.height/2)
+        let YConstraintIntervalStepper = NSLayoutConstraint(item: intervalStepper ?? "", attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: intervalPopupView, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: self.intervalPopupView.frame.size.height/2)
         view.addConstraints([YConstraintIntervalStepper])
     }
 }
